@@ -1,5 +1,6 @@
-/Test/Phpunit/codeCoverageLog
-/Test/Phpunit/vendor
-
 /vendor
 /composer.lock
+
+/Test/Phpunit/codeCoverageLog
+/Test/Phpunit/vendor
+/Test/codeSniffer/vendor
