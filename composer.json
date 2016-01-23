@@ -1,5 +1,7 @@
 {
     "name": "potaka/content-finder-bundle",
+    "description": "Find files by content",
+    "license": "MIT",
     "require": {
         "symfony/finder": "2.8.*"
     },
