@@ -1,0 +1,22 @@
+language: php
+php:
+  - 5.5
+  - 5.6
+  - 7.0
+before_script:
+
+script:
+    - cd Test/Phpunit
+    - composer install
+    - vendor/bin/phpunit
+    - cd ../codeSniffer
+    - composer install
+    - vendor/bin/phpcs
+
+matrix:
+    allow_failures:
+        - php: 7.0
+
+notifications:
+    on_failure: always
+    on_change: always
