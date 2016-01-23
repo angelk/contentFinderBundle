@@ -1,5 +1,5 @@
 {
-    "name": "contentFinderBundle",
+    "name": "potaka/content-finder-bundle",
     "require": {
         "symfony/finder": "2.8.*"
     },
