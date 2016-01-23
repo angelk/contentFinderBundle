@@ -1,0 +1,11 @@
+{
+    "name": "contentFinderBundle",
+    "require": {
+        "symfony/finder": "2.8.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Potaka": "src/"
+        }
+    }
+}
