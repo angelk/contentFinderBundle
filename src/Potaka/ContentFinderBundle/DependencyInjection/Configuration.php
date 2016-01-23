@@ -16,13 +16,23 @@ class Configuration implements ConfigurationInterface
      * {@inheritdoc}
      */
     public function getConfigTreeBuilder()
-    {
+        {
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('potaka_content_finder');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode->children()
+                    ->arrayNode('services')
+                        ->prototype('array')
+                            ->children()
+                                ->scalarNode('name')->end()
+                                ->scalarNode('fileFinder')->end()
+                                ->scalarNode('contentFinder')->end()
+                                ->scalarNode('directory')->end()
+                                ->scalarNode('content')->end()
+                            ->end()
+                        ->end()
+                    ->end()
+                 ->end();
 
         return $treeBuilder;
     }

@@ -9,7 +9,7 @@ use SplFileInfo;
  *
  * @author po_taka <angel.koilov@gmail.com>
  */
-class SimpleUnifficientContentFinder extends AbstractContentFinder
+class SimpleInefficientContentFinder extends AbstractContentFinder
 {
     public function checkFile(SplFileInfo $file)
     {
