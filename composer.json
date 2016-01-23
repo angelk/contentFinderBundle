@@ -3,6 +3,7 @@
     "description": "Find files by content",
     "license": "MIT",
     "require": {
+        "symfony/framework-bundle": "2.8",
         "symfony/finder": "2.8.*"
     },
     "autoload": {

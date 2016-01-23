@@ -2,3 +2,4 @@
 /Test/Phpunit/vendor
 
 /vendor
+/composer.lock
