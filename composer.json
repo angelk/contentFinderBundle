@@ -4,7 +4,8 @@
     "license": "MIT",
     "require": {
         "symfony/framework-bundle": "2.8",
-        "symfony/finder": "2.8.*"
+        "symfony/finder": "2.8.*",
+        "symfony/console": "2.8.*"
     },
     "autoload": {
         "psr-0": {
