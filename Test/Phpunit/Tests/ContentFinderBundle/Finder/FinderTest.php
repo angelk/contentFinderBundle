@@ -7,7 +7,7 @@ use PHPUnit_Framework_TestCase;
 use SplFileInfo;
 
 use Potaka\ContentFinderBundle\Finder\Finder;
-use Potaka\ContentFinderBundle\Finder\File\SymfonyFinderBridge;
+use Potaka\ContentFinderBundle\Finder\File\SymfonyFinderAdapter;
 use Potaka\ContentFinderBundle\Finder\Content\SimpleInefficientContentFinder;
 
 /**
@@ -21,7 +21,7 @@ class FinderTest extends PHPUnit_Framework_TestCase
      */
     public function testFind()
     {
-        $fileFinderMockBuilder = $this->getMockBuilder(SymfonyFinderBridge::class);
+        $fileFinderMockBuilder = $this->getMockBuilder(SymfonyFinderAdapter::class);
         $fileFinderMockBuilder->disableOriginalConstructor()
                               ->setMethods(['find']);
         $fileFinderMock = $fileFinderMockBuilder->getMock();
@@ -59,7 +59,7 @@ class FinderTest extends PHPUnit_Framework_TestCase
      */
     public function testFindFilteringAllFilesInContentFinder()
     {
-        $fileFinderMockBuilder = $this->getMockBuilder(SymfonyFinderBridge::class);
+        $fileFinderMockBuilder = $this->getMockBuilder(SymfonyFinderAdapter::class);
         $fileFinderMockBuilder->disableOriginalConstructor()
                               ->setMethods(['find']);
         $fileFinderMock = $fileFinderMockBuilder->getMock();

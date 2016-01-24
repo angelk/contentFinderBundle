@@ -10,7 +10,7 @@ Example:
 ```
 services:
     simpleFileFinder:
-        class: Potaka\ContentFinderBundle\Finder\File\SymfonyFinderBridge
+        class: Potaka\ContentFinderBundle\Finder\File\SymfonyFinderAdapter
 ```
 - Register conentFinder service
 

@@ -3,11 +3,11 @@
 namespace Potaka\ContentFinderBundle\Finder\File;
 
 /**
- * Description of SymfonyFinderBridge
+ * Description of SymfonyFinderAdapter
  *
  * @author po_taka <angel.koilov@gmail.com>
  */
-class SymfonyFinderBridge implements FileFinderInterface
+class SymfonyFinderAdapter implements FileFinderInterface
 {
     /**
      * {@inheritdoc}
