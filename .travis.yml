@@ -9,6 +9,11 @@ script:
     - cd Test/Phpunit
     - composer install
     - vendor/bin/phpunit
+    - cd ../Behat/symfony
+    - composer install
+    - cd ../
+    - composer install
+    - vendor/bin/behat
     - cd ../codeSniffer
     - composer install
     - vendor/bin/phpcs
