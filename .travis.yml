@@ -5,6 +5,7 @@ php:
 before_script:
 
 script:
+    - composer install
     - cd Test/Phpunit
     - composer install
     - vendor/bin/phpunit
