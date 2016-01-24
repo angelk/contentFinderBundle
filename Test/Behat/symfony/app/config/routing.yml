@@ -1,0 +1,7 @@
+potaka_content_finder:
+    resource: "@PotakaContentFinderBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "behat/behat": "^3.0@dev",
+        "symfony/filesystem": "^2.8|3.0"
+    }
+}

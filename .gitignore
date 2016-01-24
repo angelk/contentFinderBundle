@@ -3,4 +3,10 @@
 
 /Test/Phpunit/codeCoverageLog
 /Test/Phpunit/vendor
+
 /Test/codeSniffer/vendor
+
+/Test/Behat/vendor
+/Test/Behat/symfony/vendor
+/Test/Behat/symfony/app/cache/
+/Test/Behat/tmp
