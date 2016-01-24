@@ -6,8 +6,8 @@ use PHPUnit_Framework_TestCase;
 
 use Symfony\Component\Console\Tester\CommandTester;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
-use Potaka\ContentFinderBundle\Command\FindCommand;
 
+use Potaka\ContentFinderBundle\Command\FindCommand;
 use Potaka\ContentFinderBundle\Finder\Finder;
 
 /**
