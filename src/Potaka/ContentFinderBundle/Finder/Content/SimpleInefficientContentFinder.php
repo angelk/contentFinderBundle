@@ -11,6 +11,9 @@ use SplFileInfo;
  */
 class SimpleInefficientContentFinder extends AbstractContentFinder
 {
+    /**
+     * {@inheritdoc}
+     */
     public function checkFile(SplFileInfo $file)
     {
         $path = $file->getPathname();

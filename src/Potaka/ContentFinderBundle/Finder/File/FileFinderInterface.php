@@ -8,5 +8,8 @@ namespace Potaka\ContentFinderBundle\Finder\File;
  */
 interface FileFinderInterface
 {
+    /**
+     * @return \SplFileInfo[]
+     */
     public function find();
 }

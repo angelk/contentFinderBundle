@@ -27,8 +27,6 @@ class Configuration implements ConfigurationInterface
                                 ->scalarNode('name')->end()
                                 ->scalarNode('fileFinder')->end()
                                 ->scalarNode('contentFinder')->end()
-                                ->scalarNode('directory')->end()
-                                ->scalarNode('content')->end()
                             ->end()
                         ->end()
                     ->end()

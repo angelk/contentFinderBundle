@@ -16,6 +16,9 @@ class SymfonyFinderBridge implements FileFinderInterface
         $this->directory = $directory;
     }
     
+    /**
+     * {@inheritdoc}
+     */
     public function find()
     {
         $finder = new \Symfony\Component\Finder\Finder();

@@ -30,27 +30,13 @@ class PotakaContentFinderExtension extends Extension
         foreach ($config['services'] as $serviceData) {
             $serviceName = $serviceData['name'];
             $fileFinder = $serviceData['fileFinder'];
-            
-            // this service is only used to build DI
-            $fileFinderServiceName = 'potaka_content_finder.fileFinder.' . uniqid();
-            $container->register($fileFinderServiceName)
-                        ->setClass($fileFinder)
-                        ->setArguments([$serviceData['directory']]);
-            
             $contentFilter = $serviceData['contentFinder'];
-            // this service is only used to build DI
-            $contentFilterServiceName = 'potaka_content_finder.contentFilter.' . uniqid();
-            $container->register($contentFilterServiceName)
-                        ->setClass($contentFilter)
-                        ->setArguments([$serviceData['content']]);
-            
-            
             $container->register($serviceName)
                         ->setClass('Potaka\ContentFinderBundle\Finder\Finder')
                         ->setArguments(
                             [
-                                new Reference($fileFinderServiceName),
-                                new Reference($contentFilterServiceName),
+                                new Reference($fileFinder),
+                                new Reference($contentFilter),
                             ]
                         );
         }
