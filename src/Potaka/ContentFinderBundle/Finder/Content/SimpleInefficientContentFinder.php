@@ -9,16 +9,17 @@ use SplFileInfo;
  *
  * @author po_taka <angel.koilov@gmail.com>
  */
-class SimpleInefficientContentFinder extends AbstractContentFinder
+class SimpleInefficientContentFinder implements ContentFinderInterface
 {
     /**
      * {@inheritdoc}
+     * Check file for content
      */
-    public function checkFile(SplFileInfo $file)
+    public function checkFile(SplFileInfo $file, $content)
     {
         $path = $file->getPathname();
-        $content = file_get_contents($path);
-        $match = strpos($content, $this->filter);
+        $fileContent = file_get_contents($path);
+        $match = strpos($fileContent, $content);
         if ($match !== false) {
             return true;
         }

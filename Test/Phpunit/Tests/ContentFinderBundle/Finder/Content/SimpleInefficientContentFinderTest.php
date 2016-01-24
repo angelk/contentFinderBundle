@@ -13,15 +13,15 @@ class SimpleInefficientContentFinderTest extends PHPUnit_Framework_TestCase
 {
     public function testSuccessfulCheckFile()
     {
-        $checker = new SimpleInefficientContentFinder('www');
+        $checker = new SimpleInefficientContentFinder();
         $splFile = new \SplFileInfo(__DIR__ . DIRECTORY_SEPARATOR . 'SimpleInefficientContentFinder' . DIRECTORY_SEPARATOR . 'fileContainsWww');
-        $this->assertTrue($checker->checkFile($splFile));
+        $this->assertTrue($checker->checkFile($splFile, 'www'));
     }
     
     public function testUnsuccessfulCheckFile()
     {
-        $checker = new SimpleInefficientContentFinder('this-is-not-in-file');
+        $checker = new SimpleInefficientContentFinder();
         $splFile = new \SplFileInfo(__DIR__ . DIRECTORY_SEPARATOR . 'SimpleInefficientContentFinder' . DIRECTORY_SEPARATOR . 'fileContainsWww');
-        $this->assertFalse($checker->checkFile($splFile));
+        $this->assertFalse($checker->checkFile($splFile, 'this-is-not-in-file'));
     }
 }

@@ -19,11 +19,16 @@ class Finder
         $this->contentFinder = $contentFinder;
     }
     
-    public function find()
+    /**
+     * @param mixed $directories
+     * @param mixed $content
+     * @return \SplFileInfo[]
+     */
+    public function find($directories, $content)
     {
         $return = [];
-        foreach ($this->fileFinder->find() as $file) {
-            if ($this->contentFinder->checkFile($file)) {
+        foreach ($this->fileFinder->find($directories) as $file) {
+            if ($this->contentFinder->checkFile($file, $content)) {
                 $return[] = $file;
             }
         }

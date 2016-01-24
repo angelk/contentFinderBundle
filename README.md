@@ -11,7 +11,6 @@ Example:
 services:
     simpleFileFinder:
         class: Potaka\ContentFinderBundle\Finder\File\SymfonyFinderBridge
-        arguments: ["/var/www"]
 ```
 - Register conentFinder service
 
@@ -20,7 +19,6 @@ example:
 services:
     simpleContentFinder:
         class: Potaka\ContentFinderBundle\Finder\Content\SimpleInefficientContentFinder
-        arguments: ["<?php"]
 ```
 - Register finder
 
@@ -34,4 +32,10 @@ potaka_content_finder:
 
 ```
 
-Not there is service named `myServiceName`
+Now there is service named `myServiceName`
+
+example usage:
+```
+$this->get('myServiceName')
+         ->find('/var/www', '<?php');
+```

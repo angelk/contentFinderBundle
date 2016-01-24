@@ -9,7 +9,10 @@ namespace Potaka\ContentFinderBundle\Finder\File;
 interface FileFinderInterface
 {
     /**
+     * Search given directories.
+     * @param mixed $directories Allow each finder to handle array, string,
+     *                           etc...
      * @return \SplFileInfo[]
      */
-    public function find();
+    public function find($directories);
 }

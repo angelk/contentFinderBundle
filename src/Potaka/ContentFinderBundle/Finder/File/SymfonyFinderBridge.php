@@ -9,20 +9,13 @@ namespace Potaka\ContentFinderBundle\Finder\File;
  */
 class SymfonyFinderBridge implements FileFinderInterface
 {
-    protected $directory;
-    
-    public function __construct($directory)
-    {
-        $this->directory = $directory;
-    }
-    
     /**
      * {@inheritdoc}
      */
-    public function find()
+    public function find($directories)
     {
         $finder = new \Symfony\Component\Finder\Finder();
-        $finder->files()->in($this->directory);
+        $finder->files()->in($directories);
         $return = [];
         foreach ($finder as $file) {
             $return[] = $file;

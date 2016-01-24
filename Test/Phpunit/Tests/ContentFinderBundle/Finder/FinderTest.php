@@ -46,7 +46,7 @@ class FinderTest extends PHPUnit_Framework_TestCase
                                 ->willReturn(true);
         
         $finder = new Finder($fileFinderMock, $contentFinderMock);
-        $result = $finder->find();
+        $result = $finder->find(['/tmp'], 'content');
         $this->assertSame(
             [$splFileInfoMock, $splFileInfoMock],
             $result
@@ -84,7 +84,7 @@ class FinderTest extends PHPUnit_Framework_TestCase
                                 ->willReturn(false);
         
         $finder = new Finder($fileFinderMock, $contentFinderMock);
-        $result = $finder->find();
+        $result = $finder->find('/tmp', 'content');
         $this->assertSame(
             [],
             $result
